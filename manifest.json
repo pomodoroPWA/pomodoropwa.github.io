@@ -1,7 +1,7 @@
 {
-  "name": "Mój Licznik Czasu PWA",
-  "short_name": "Licznik",
-  "description": "Prosta aplikacja do odmierzania czasu działająca bez internetu.",
+  "name": "Pomodoro Technique",
+  "short_name": "Pomodoro",
+  "description": "Aplikacja do pracy w systemie Pomodoro, działająca bez internetu.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -17,6 +17,20 @@
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "600x600",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "600x600",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
