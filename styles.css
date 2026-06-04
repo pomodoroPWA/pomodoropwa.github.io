@@ -307,7 +307,7 @@ body {
 
   /* 2. Kontener też musi przestać być sztywny */
   .container {
-    width: 100%;              /* Niech rozciąga się od lewej do prawej krawędzi */
+    width: 600px;              /* Niech rozciąga się od lewej do prawej krawędzi */
   }
 
   /* 3. Powiększamy guziki i tekst, żeby łatwo było w nie trafić palcem */
