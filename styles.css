@@ -267,6 +267,7 @@ body {
   border: 2px solid gray;
   border-radius: 5px;
   margin: 0; /* Zmieniamy na 0, żeby nie psuł pionowego środka */
+  justify-content: space-between;
 }
     
     /* Change color on hover */
