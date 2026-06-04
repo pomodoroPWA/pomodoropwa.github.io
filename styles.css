@@ -296,16 +296,31 @@ body {
       float: bottom;
     }
 
- /* --- SKALOWANIE DLA TELEFONÓW --- */
+/* --- IDEALNE SKALOWANIE I WIELKIE GUZIKI --- */
 @media (max-width: 600px) {
+  
   main {
-    /* Mówimy: zachowaj swoje 600px, ale optycznie pomniejsz wszystko do 60% */
-    transform: scale(0.6); 
+    transform: scale(0.65);     /* Pomniejszamy całą maszynę, ale odrobinę mniej niż wcześniej */
+    transform-origin: top center; /* Trzymaj środek i górę ekranu */
     
-    /* Pilnujemy, żeby pomniejszona strona trzymała się góry i środka ekranu */
-    transform-origin: top center; 
-    
-    width: 600px; /* Resetujemy szerokość z powrotem do bezpiecznych 600px */
+    width: 600px;
+    margin: 0 auto;            /* Centrowanie całej aplikacji na ekranie telefonu */
+    padding-left: 0px;         /* Usuwamy lewą poduszkę boczną */
+    padding-right: 0px;        /* Usuwamy prawą poduszkę boczną */
+  }
+
+  /* Dajemy guzikom siłę, by oparły się pomniejszeniu całej strony */
+  button {
+    font-size: 26px !important;    /* Potężny, bardzo wyraźny napis */
+    padding: 20px 35px !important; /* Wielkie, nadmuchane guziki – idealne dla ziemskich palców */
+    border-radius: 10px !important;
+  }
+
+  /* Pudełko, które trzyma guziki, musi dostać więcej miejsca na te wielkie przyciski */
+  .button {
+    width: 100% !important;        /* Rozciągamy strefę guzików na całą szerokość */
+    justify-content: center;       /* Upewniamy się, że guziki są idealnie na środku */
+    gap: 10px;                     /* Dajemy im trochę oddechu od siebie */
   }
 }
     
