@@ -301,12 +301,17 @@ body {
 @media (max-width: 600px) {
   
   main {
-    transform: scale(0.65);     /* Pomniejszamy całą maszynę, ale odrobinę mniej niż wcześniej */
-    transform-origin: top center; /* Trzymaj środek i górę ekranu */
+    position: relative;         /* Pozwala nam swobodnie przesuwać całe pudełko */
+    left: 50%;                  /* Przesuwa lewą krawędź idealnie na środek ekranu */
+    
+    /* Trik: translateX(-50%) cofa pudełko o jego własną połowę, a scale(0.65) je pomniejsza */
+    transform: translateX(-50%) scale(0.65); 
+    transform-origin: top center; /* Teraz ta szpilka zadziała idealnie w wyznaczonym punkcie */
     
     width: 600px;
-    padding-left: 0px;         /* Usuwamy lewą poduszkę boczną */
-    padding-right: 0px;        /* Usuwamy prawą poduszkę boczną */
+    margin: 0;                  /* Kasujemy stary margin, bo teraz sami sterujemy środkiem */
+    padding-left: 0px;         
+    padding-right: 0px;        
   }
 
   /* Dajemy guzikom siłę, by oparły się pomniejszeniu całej strony */
