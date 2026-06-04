@@ -297,29 +297,4 @@ body {
     }
     
 
-    /* --- MAGIA DLA TELEFONÓW --- */
-@media (max-width: 600px) {
-
-  /* 1. Odchudzamy główne pudełko i zabieramy boczne marginesy wewnętrzne (padding) */
-  main {
-    width: 100%;              /* Zajmij całą szerokość ekranu telefonu */
-    padding: 50px 0px 0 0px;  /* Zostawiamy 50px na górze, ale boki ustawiamy na 0 */
-  }
-
-  /* 2. Kontener też musi przestać być sztywny */
-  .container {
-    width: 100%;              /* Niech rozciąga się od lewej do prawej krawędzi */
-  }
-
-  /* 3. Powiększamy guziki i tekst, żeby łatwo było w nie trafić palcem */
-  button {
-    padding: 18px 32px;       /* Guziki stają się większe, łatwiej w nie kliknąć */
-    font-size: 22px;          /* Tekst w guzikach staje się duży i czytelny */
-    margin: 15px;             /* Dajemy im trochę więcej przestrzeni wokół */
-  }
-
-  /* Mała poprawka paska nawigacji, żeby też nie uciekał za ekran */
-  .topnav {
-    min-width: 100%;
-  }
-}
+    
