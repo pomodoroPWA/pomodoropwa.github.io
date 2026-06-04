@@ -229,13 +229,13 @@ body {
     .topnav {
   display: flex;           /* 1. Zmień pasek w inteligentną taśmę, która sama układa rzeczy */
   align-items: center;     /* 2. Wyrównaj logo i napis idealnie w pionie (w tej samej linii) */
-  justify-content: center; /* 3. Umieść logo i napis razem na samym środku paska */
+  justify-content: space-between; /* 3. Umieść logo i napis razem na samym środku paska */
   gap: 20px;               /* 4. Daj im stały, bezpieczny odstęp od siebie */
   
   /* Reszta Twojego kodu zostaje bez zmian */
   height: 50px;
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   min-width: 400px;
   padding: 10px;
   overflow: hidden;
@@ -266,8 +266,7 @@ body {
   text-decoration: none;
   border: 2px solid gray;
   border-radius: 5px;
-  margin: 0; /* Zmieniamy na 0, żeby nie psuł pionowego środka */
-  justify-content: space-between;
+  margin: 0 auto; /* Zmieniamy na 0, żeby nie psuł pionowego środka */
 }
     
     /* Change color on hover */
@@ -367,7 +366,6 @@ body {
   .topnav a {
     font-size: 14px !important; /* Troszkę mniejsze literki, żeby się zmieściły */
     padding: 5px 8px !important;/* Mniejsze poduszeczki wokół tekstu */
-    margin: 5px 2px !important; /* Ściskamy je bliżej siebie */
   }
 
   /* 2. PROSTA STOPKA (FOOTER) BEZ SPADANIA */
