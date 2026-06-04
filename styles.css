@@ -2,7 +2,7 @@ body {
 
     margin: 0 auto;
     background-color: rgba(132, 140, 142, 0.9);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   
   
   } 
@@ -305,7 +305,6 @@ body {
     transform-origin: top center; /* Trzymaj środek i górę ekranu */
     
     width: 600px;
-    margin: 0 auto;            /* Centrowanie całej aplikacji na ekranie telefonu */
     padding-left: 0px;         /* Usuwamy lewą poduszkę boczną */
     padding-right: 0px;        /* Usuwamy prawą poduszkę boczną */
   }
