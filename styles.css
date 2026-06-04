@@ -214,7 +214,7 @@ body {
     width: 200px; 
   
   }
-    .topnav {
+    /* .topnav {
       height: 50px;
       width: 100%;
       max-width: 800px;
@@ -224,11 +224,28 @@ body {
       background-color: rgba(1,1,1);
       margin: 0 auto;
       
-    }
+    } */
+
+    .topnav {
+  display: flex;           /* 1. Zmień pasek w inteligentną taśmę, która sama układa rzeczy */
+  align-items: center;     /* 2. Wyrównaj logo i napis idealnie w pionie (w tej samej linii) */
+  justify-content: center; /* 3. Umieść logo i napis razem na samym środku paska */
+  gap: 20px;               /* 4. Daj im stały, bezpieczny odstęp od siebie */
+  
+  /* Reszta Twojego kodu zostaje bez zmian */
+  height: 50px;
+  width: 100%;
+  max-width: 800px;
+  min-width: 400px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgba(1,1,1);
+  margin: 0 auto;
+}
     
    
   
-    .topnav a {
+    /* .topnav a {
   
       display: inline-block;
       color: #BFB7B6;
@@ -239,7 +256,18 @@ body {
       border-radius: 5px;
       margin: 10px 5px 5px 5px;
    
-    }
+    } */
+
+    .topnav a {
+  display: inline-block;
+  color: #BFB7B6;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: 0; /* Zmieniamy na 0, żeby nie psuł pionowego środka */
+}
     
     /* Change color on hover */
     .topnav a:hover {
