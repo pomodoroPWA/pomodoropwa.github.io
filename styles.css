@@ -327,6 +327,32 @@ body {
     justify-content: center;       /* Upewniamy się, że guziki są idealnie na środku */
     gap: 10px;                     /* Dajemy im trochę oddechu od siebie */
   }
+
+  /* 1. NAPRAWA PASKA NAWIGACJI (NAVBAR) */
+  .topnav {
+    min-width: 100% !important; /* Usuwamy blokadę 400px, pasek dopasuje się do telefonu */
+    height: auto !important;    /* Pozwalamy mu urosnąć w dół, jeśli napisy spadną niżej */
+    text-align: center;         /* Środkujemy linki w menu */
+  }
+
+  .topnav a {
+    font-size: 14px !important; /* Troszkę mniejsze literki, żeby się zmieściły */
+    padding: 5px 8px !important;/* Mniejsze poduszeczki wokół tekstu */
+    margin: 5px 2px !important; /* Ściskamy je bliżej siebie */
+  }
+
+  /* 2. PROSTA STOPKA (FOOTER) BEZ SPADANIA */
+  .footer {
+    float: none !important;       /* Kasujemy ziemskie "pływanie" */
+    margin: 40px 0 0 0 !important;/* Likwidujemy gigantyczny margines 100px z prawej strony */
+    text-align: center !important;/* Stopka grzecznie staje na samym środku */
+  }
+
+  /* 3. WYGŁADZENIE CIENIA */
+  .set {
+    /* Zmieniamy pierwszą cyfrę z 5px na 0px. Teraz cień nie ucieka w bok, tylko równe opada w dół */
+    box-shadow: 0px 5px 7px 3px #000000 !important; 
+  }
 }
     
 
