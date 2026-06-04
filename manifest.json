@@ -1,7 +1,7 @@
 {
   "name": "Pomodoro Technique",
   "short_name": "Pomodoro",
-  "description": "Aplikacja do pracy w systemie Pomodoro, działająca bez internetu.",
+  "description": "A clean Pomodoro Technique app to track your work and breaks. Runs entirely offline with no internet needed.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
