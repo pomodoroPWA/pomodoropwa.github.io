@@ -358,8 +358,7 @@ button:active {
     gap: 10px;
   }
 
-  /* .topnav {
-    min-width: 100% !important;
+  .topnav {
     height: auto !important;
     text-align: center;
   }
@@ -367,21 +366,8 @@ button:active {
   .topnav a {
     font-size: 14px !important;
     padding: 5px 8px !important;
-  } */
-.topnav {
-    position: relative;
-    left: 50%;
-    
-    /* Ta linijka kurczy pasek o tyle samo co główną stronę */
-    transform: translateX(-50%) scale(0.65);
-    transform-origin: top center;
-
-    width: 600px !important;     /* Blokujemy go na 600px, żeby się nie rozjeżdżał */
-    max-width: 600px !important;
-    min-width: 600px !important;
-    margin: 0;
-    height: 50px !important;     /* Wracamy do oryginalnej wysokości */
   }
+
 
   .footer {
     float: none !important;
