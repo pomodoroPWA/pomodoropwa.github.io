@@ -255,10 +255,10 @@ button:active {
   width: 100%;
   max-width: 600px;
   min-width: 400px;
-  padding: 10px;
   overflow: hidden;
   background-color: rgba(1, 1, 1);
   margin: 0 auto;
+  padding: 10px 0;
 }
 
 .topnav a {
@@ -288,6 +288,8 @@ button:active {
   height: 50px;
   color: gray;
   font-size: 50px;
+  margin: 0 10px;
+ 
 
 }
 
@@ -330,22 +332,29 @@ button:active {
   float: bottom;
 }
 
+
 @media (max-width: 600px) {
 
-  main {
+  /* Teraz zmniejszamy całe pudło jako jeden element. */
+  /* Komputer nie zrobi już żadnej milimetrowej przerwy! */
+  .app-wrapper {
     position: relative;
     left: 50%;
-
-    /* Trik: translateX(-50%) cofa pudełko o jego własną połowę, a scale(0.65) je pomniejsza */
-    transform: translateX(-50%) scale(0.65);
+    transform: translateX(-50%) scale(0.60);
     transform-origin: top center;
-
     width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Z main zdejmujemy pozycjonowanie, bo przejęło je wspólne pudło */
+  main {
+   
     margin: 0;
     padding-left: 0px;
     padding-right: 0px;
   }
 
+  /* Twój własny, sprawdzony kod dla reszty przycisków i stopki zostaje */
   button {
     font-size: 26px !important;
     padding: 10px 35px !important;
@@ -358,17 +367,6 @@ button:active {
     gap: 10px;
   }
 
-  .topnav {
-    height: auto !important;
-    text-align: center;
-  }
-
-  .topnav a {
-    font-size: 14px !important;
-    padding: 5px 8px !important;
-  }
-
-
   .footer {
     float: none !important;
     margin: 40px 0 0 0 !important;
@@ -379,3 +377,4 @@ button:active {
     box-shadow: 0px 5px 7px 3px #000000 !important;
   }
 }
+

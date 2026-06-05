@@ -1,13 +1,16 @@
-const CACHE_NAME = 'licznik-v1';
+const CACHE_NAME = 'pomodoro-v1';
 const ASSETS = [
   './',
   './index.html',
+  './style.css',            
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './screenshot-mobile.png',   
+  './screenshot-desktop.png'   
 ];
 
-// Robot instaluje się w pamięci i chowa pliki
+// Robot instaluje się w pamięci urządzenia
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -16,7 +19,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// Robot pilnuje, żeby strona działała nawet bez internetu
+// Robot pilnuje, żeby strona działała bez sieci
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
