@@ -266,7 +266,7 @@ body {
   text-decoration: none;
   border: 2px solid gray;
   border-radius: 5px;
-  margin: 0 auto; /* Zmieniamy na 0, żeby nie psuł pionowego środka */
+  margin: 0 auto; 
 }
     
     /* Change color on hover */
@@ -329,55 +329,50 @@ body {
 @media (max-width: 600px) {
   
   main {
-    position: relative;         /* Pozwala nam swobodnie przesuwać całe pudełko */
-    left: 50%;                  /* Przesuwa lewą krawędź idealnie na środek ekranu */
+    position: relative;        
+    left: 50%;                  
     
     /* Trik: translateX(-50%) cofa pudełko o jego własną połowę, a scale(0.65) je pomniejsza */
     transform: translateX(-50%) scale(0.65); 
-    transform-origin: top center; /* Teraz ta szpilka zadziała idealnie w wyznaczonym punkcie */
+    transform-origin: top center; 
     
     width: 600px;
-    margin: 0;                  /* Kasujemy stary margin, bo teraz sami sterujemy środkiem */
+    margin: 0;               
     padding-left: 0px;         
     padding-right: 0px;        
   }
 
-  /* Dajemy guzikom siłę, by oparły się pomniejszeniu całej strony */
   button {
-    font-size: 26px !important;    /* Potężny, bardzo wyraźny napis */
-    padding: 20px 35px !important; /* Wielkie, nadmuchane guziki – idealne dla ziemskich palców */
+    font-size: 26px !important;   
+    padding: 10px 35px !important; 
     border-radius: 10px !important;
   }
 
-  /* Pudełko, które trzyma guziki, musi dostać więcej miejsca na te wielkie przyciski */
   .button {
-    width: 100% !important;        /* Rozciągamy strefę guzików na całą szerokość */
-    justify-content: center;       /* Upewniamy się, że guziki są idealnie na środku */
-    gap: 10px;                     /* Dajemy im trochę oddechu od siebie */
+    width: 100% !important;        
+    justify-content: center;      
+    gap: 10px;                    
   }
 
-  /* 1. NAPRAWA PASKA NAWIGACJI (NAVBAR) */
   .topnav {
-    min-width: 100% !important; /* Usuwamy blokadę 400px, pasek dopasuje się do telefonu */
-    height: auto !important;    /* Pozwalamy mu urosnąć w dół, jeśli napisy spadną niżej */
-    text-align: center;         /* Środkujemy linki w menu */
+    min-width: 100% !important; 
+    height: auto !important;   
+    text-align: center;       
   }
 
   .topnav a {
-    font-size: 14px !important; /* Troszkę mniejsze literki, żeby się zmieściły */
-    padding: 5px 8px !important;/* Mniejsze poduszeczki wokół tekstu */
+    font-size: 14px !important; 
+    padding: 5px 8px !important;
   }
 
-  /* 2. PROSTA STOPKA (FOOTER) BEZ SPADANIA */
+ 
   .footer {
-    float: none !important;       /* Kasujemy ziemskie "pływanie" */
-    margin: 40px 0 0 0 !important;/* Likwidujemy gigantyczny margines 100px z prawej strony */
-    text-align: center !important;/* Stopka grzecznie staje na samym środku */
+    float: none !important;      
+    margin: 40px 0 0 0 !important;
+    text-align: center !important;
   }
 
-  /* 3. WYGŁADZENIE CIENIA */
   .set {
-    /* Zmieniamy pierwszą cyfrę z 5px na 0px. Teraz cień nie ucieka w bok, tylko równe opada w dół */
     box-shadow: 0px 5px 7px 3px #000000 !important; 
   }
 }
