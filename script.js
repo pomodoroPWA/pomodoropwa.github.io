@@ -32,10 +32,7 @@ function startTimer() {
     if (isRunning) return; 
     isRunning = true;
     track.classList.add('animated-drive');
-    // if (!isBreak) {
-    //     track.classList.add('animated-drive');
-    //     text1.classList.add('animated-text');
-    // }
+ 
     audio.play();
   
   text1.classList.add('animated-text');
@@ -68,6 +65,9 @@ function startTimer() {
     }, 1000);
 }
 
+
+
+
 function resetTimer() {
     clearInterval(countdown);
     timeLeft = workTime; 
@@ -75,23 +75,18 @@ function resetTimer() {
     displayTime(breakTime, breakTimerDisplay);
     isRunning = false;  
     isBreak = false; 
-   track.classList.remove('animated-drive');
-   track.offsetHeight; // Wymuszenie reflow, aby zresetować animację
-  
 
-   coffe.classList.remove('animated-drive1');
+    // Usunięcie klas z animacjami
+    track.classList.remove('animated-drive');
+    coffe.classList.remove('animated-drive1');
     text1.classList.remove('animated-text');
-   text2.classList.remove('animated-text2');
+    text2.classList.remove('animated-text2');
    
-    coffe.offsetHeight;
-     text1.offsetHeight;
-    text2.offsetHeight;
-    location.reload()
-  
-    // track.classList.remove('animated-drive');
-    // coffe.classList.remove('animated-drive1');
-    //  text1.classList.remove('animated-text');
+    // Zresetowanie stanu zatrzymania animacji do normy
+    track.style.animationPlayState = 'running';
+    coffe.style.animationPlayState = 'running';
 
+    // USUNIĘTE: location.reload() już tu nie ma!
 }
 
 // Obsługa zdarzeń dla pierwszego timera
