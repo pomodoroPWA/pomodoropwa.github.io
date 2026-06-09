@@ -28,43 +28,6 @@ function displayTime(seconds, displayElement) {
     displayElement.textContent = display;
 }
 
-// function startTimer() {
-//     if (isRunning) return; 
-//     isRunning = true;
-//     track.classList.add('animated-drive');
- 
-//     audio.play();
-  
-//   text1.classList.add('animated-text');
-
-//     countdown = setInterval(() => {
-//         timeLeft--;
-//         if (timeLeft < 0) {
-//             clearInterval(countdown);
-//            isRunning = false;
-//             if (isBreak) {
-//                 timeLeft = workTime; 
-//                 displayTime(timeLeft, workTimerDisplay);
-//                 isBreak = false;
-//                 coffe.style.animationPlayState = 'paused';
-//                 track.style.animationPlayState = 'running';
-//             } else {
-//                 timeLeft = breakTime; 
-//                 displayTime(timeLeft, breakTimerDisplay);
-//                 isBreak = true;
-//               audio.play();
-//               coffe.classList.add('animated-drive1');
-//               text2.classList.add('animated-text2');
-//               coffe.style.animationPlayState = 'running';
-//               track.style.animationPlayState = 'paused';
-//             }
-//             startTimer(); // Restartuj timer
-//         } else {
-//             displayTime(timeLeft, isBreak ? breakTimerDisplay : workTimerDisplay);
-//         }
-//     }, 1000);
-// }
-
 
 function startTimer() {
     if (isRunning) return; 
@@ -73,15 +36,11 @@ function startTimer() {
     audio.play();
     text1.classList.add('animated-text');
 
-    // Zapamiętujemy dokładny moment w przyszłości, kiedy timer MA SIĘ SKOŃCZYĆ
-    // Obecny czas w milisekundach + (sekundy, które zostały * 1000)
-    const endTime = Date.now() + (timeLeft * 1000);
+      const endTime = Date.now() + (timeLeft * 1000);
 
     countdown = setInterval(() => {
-        // Co sekundę sprawdzamy, jaki jest REALNY czas systemowy
         const currentTime = Date.now();
         
-        // Obliczamy, ile sekund zostało do zaplanowanego końca
         timeLeft = Math.round((endTime - currentTime) / 1000);
 
         if (timeLeft < 0) {
@@ -130,7 +89,6 @@ function resetTimer() {
     track.style.animationPlayState = 'running';
     coffe.style.animationPlayState = 'running';
 
-    // USUNIĘTE: location.reload() już tu nie ma!
 }
 
 // Obsługa zdarzeń dla pierwszego timera
@@ -156,37 +114,12 @@ let timeLeft2 = workTime2;
 let isRunning2 = false;  
 
 
-// const coffe2 = document.querySelector('.coffe2'); 
-
 function displayTime2(seconds, displayElement) {
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds = seconds % 60;
     const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
     displayElement.textContent = display;
 }
-
-// function startTimer2() {
-//     if (isRunning2) return; 
-
-//    isRunning2 = true;
-//    audio.play();
-//    boat.classList.add('animated-drive2');
-//    text3.classList.add('animated-text');
-
-//     countdown2 = setInterval(() => {
-//         timeLeft2--;
-        
-//         if (timeLeft2 < 0) {
-//             clearInterval(countdown2);
-//             isRunning2 = false;
-//             timeLeft2 = workTime2; // Resetuj czas do pracy
-//             displayTime2(timeLeft2, break2TimerDisplay);
-//             audio.play();
-//         } else {
-//             displayTime2(timeLeft2, break2TimerDisplay);
-//         }
-//     }, 1000);
-// }
 
 
 function startTimer2() {
@@ -197,14 +130,11 @@ function startTimer2() {
     boat.classList.add('animated-drive2');
     text3.classList.add('animated-text');
 
-    // Zapamiętujemy dokładny moment końca dla drugiego timera
     const endTime2 = Date.now() + (timeLeft2 * 1000);
 
     countdown2 = setInterval(() => {
-        // Sprawdzamy realny czas systemowy
         const currentTime = Date.now();
         
-        // Obliczamy, ile sekund zostało do końca drugiego timera
         timeLeft2 = Math.round((endTime2 - currentTime) / 1000);
         
         if (timeLeft2 < 0) {
